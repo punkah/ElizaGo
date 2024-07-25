@@ -7,14 +7,14 @@ on:
       command:
         type: string
         required: false
-        default: 'eas update --auto --non-interactive'
+        default: "eas update --auto --non-interactive"
     secrets:
       EXPO_TOKEN:
         required: true
 
 jobs:
   publish:
-    name: 'Publish'
+    name: "Publish"
 
     runs-on: ubuntu-latest
 
@@ -42,11 +42,11 @@ jobs:
         run: npm ci
 
       - name: 🚀 Publish app
-        if: '${{ !inputs.commentUpdate }}'
-        run: '${{ inputs.command }}'
+        if: "${{ !inputs.commentUpdate }}"
+        run: "${{ inputs.command }}"
 
       - name: 🚀 Publish app
-        if: '${{ inputs.commentUpdate }}'
+        if: "${{ inputs.commentUpdate }}"
         uses: expo/expo-github-action/preview@v8
         with:
-          command: '${{ inputs.command }}'
+          command: "${{ inputs.command }}"

@@ -3,14 +3,14 @@ on:
     types:
       - closed
     branches:
-      - '*'
+      - "*"
   workflow_dispatch: {}
 
-name: 'Pull Request Cleanup'
+name: "Pull Request Cleanup"
 
 jobs:
   unpublish_pr:
-    name: 'Unpublish'
+    name: "Unpublish"
 
     if: ${{ github.event_name == 'pull_request' }}
 
@@ -18,10 +18,10 @@ jobs:
     with:
       command: 'eas channel:delete "${{ github.head_ref }}" --non-interactive && eas branch:delete "${{ github.head_ref }}" --non-interactive'
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"
 
   publish_manual:
-    name: 'Unpublish'
+    name: "Unpublish"
 
     if: ${{ github.event_name != 'pull_request' }}
 
@@ -29,4 +29,4 @@ jobs:
     with:
       command: 'eas channel:delete "${{ github.ref }}" --non-interactive && eas branch:delete "${{ github.ref }}" --non-interactive'
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"

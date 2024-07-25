@@ -1,11 +1,11 @@
 on:
   workflow_call: {}
 
-name: 'Test'
+name: "Test"
 
 jobs:
   types:
-    name: 'Types'
+    name: "Types"
 
     runs-on: ubuntu-latest
 
@@ -34,7 +34,7 @@ jobs:
         run: npm run test:types
 
   lint:
-    name: 'Lint'
+    name: "Lint"
 
     runs-on: ubuntu-latest
 
@@ -63,7 +63,7 @@ jobs:
         run: npm run test:lint
 
   format:
-    name: 'Format'
+    name: "Format"
 
     runs-on: ubuntu-latest
 
@@ -92,7 +92,7 @@ jobs:
         run: npm run test:format
 
   expo_deps_valid:
-    name: 'Expo Dependencies Consistent'
+    name: "Expo Dependencies Consistent"
 
     runs-on: ubuntu-latest
 

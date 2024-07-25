@@ -1,26 +1,26 @@
 on:
   pull_request:
     branches:
-      - '*'
+      - "*"
   workflow_dispatch: {}
 
-name: 'Pull Request'
+name: "Pull Request"
 
 jobs:
   test:
-    name: 'Test'
+    name: "Test"
 
     uses: ./.github/workflows/part_test.yml
 
   dependabot:
-    name: 'Dependabot'
+    name: "Dependabot"
 
     if: ${{ github.actor == 'dependabot[bot]' }}
 
     uses: ./.github/workflows/part_dependabot.yml
 
   publish_pr:
-    name: 'Publish'
+    name: "Publish"
 
     if: ${{ github.event_name == 'pull_request' }}
 
@@ -29,13 +29,13 @@ jobs:
       commentUpdate: true
       command: 'eas update --branch="${{ github.head_ref }}" --message="${{ github.sha }}" --non-interactive'
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"
 
   publish_manual:
-    name: 'Publish'
+    name: "Publish"
 
     if: ${{ github.event_name != 'pull_request' }}
 
     uses: ./.github/workflows/part_publish.yml
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"

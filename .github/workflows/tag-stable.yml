@@ -1,33 +1,33 @@
 on:
   push:
     tags:
-      - 'v[12].[0-9]+.[0-9]+'
+      - "v[12].[0-9]+.[0-9]+"
 
-name: 'Stable Tag'
+name: "Stable Tag"
 
 jobs:
   release:
-    name: 'Release'
+    name: "Release"
 
     uses: ./.github/workflows/part_release.yml
     with:
-      releaseName: '${{ github.ref_name }}'
+      releaseName: "${{ github.ref_name }}"
       stable: true
 
   publish_update:
-    name: 'Publish Update'
+    name: "Publish Update"
 
     uses: ./.github/workflows/part_publish.yml
     with:
       command: 'eas update --channel="production" --message="${{ github.event.head_commit.message }}" --non-interactive'
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"
 
   publish_build:
-    name: 'Publish Build & Submit'
+    name: "Publish Build & Submit"
 
     uses: ./.github/workflows/part_publish.yml
     with:
-      command: 'eas build --platform=all --auto-submit --non-interactive'
+      command: "eas build --platform=all --auto-submit --non-interactive"
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"

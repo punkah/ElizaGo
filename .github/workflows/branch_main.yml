@@ -1,20 +1,20 @@
 on:
   push:
     branches:
-      - 'main'
+      - "main"
   workflow_dispatch: {}
 
-name: 'Main Branch'
+name: "Main Branch"
 
 jobs:
   test:
-    name: 'Test'
+    name: "Test"
 
     uses: ./.github/workflows/part_test.yml
 
   publish:
-    name: 'Publish'
+    name: "Publish"
 
     uses: ./.github/workflows/part_publish.yml
     secrets:
-      EXPO_TOKEN: '${{ secrets.EXPO_TOKEN }}'
+      EXPO_TOKEN: "${{ secrets.EXPO_TOKEN }}"

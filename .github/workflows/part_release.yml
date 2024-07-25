@@ -9,7 +9,7 @@ on:
         type: boolean
         default: false
 
-name: 'Release'
+name: "Release"
 
 jobs:
   create_release:
