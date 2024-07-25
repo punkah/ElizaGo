@@ -1,0 +1,37 @@
+{
+  "name": "eliza-go",
+  "version": "1.1.6",
+  "scripts": {
+    "start": "npx expo start",
+    "android": "npm run start -- --android",
+    "ios": "npm run start -- --ios",
+    "web": "npm run start -- --web",
+    "test": "npm run test:types && npm run test:lint && npm run test:format",
+    "test:types": "tsc --noEmit",
+    "test:lint": "eslint .",
+    "test:format": "prettier --check .",
+    "fix:format": "prettier --write .",
+    "version": "./bin/sync-expo-version.mjs"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.2.1",
+    "@types/react": "~18.2.45",
+    "expo": "^51.0.18",
+    "expo-status-bar": "~1.12.1",
+    "expo-updates": "~0.25.18",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.3",
+    "react-native-web": "~0.19.6",
+    "typescript": "~5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "prettier": "3.2.5"
+  },
+  "private": true
+}
