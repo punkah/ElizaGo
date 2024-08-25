@@ -1,0 +1,403 @@
+export const connections = {
+  Central: "Central",
+  Jubilee: "Jubilee",
+  DLR: "DLR",
+  NationalRail: "National Rail",
+  Circle: "Circle",
+  HammersmithAndCity: "Hammersmith & City",
+  Metropolitan: "Metropolitan",
+  LondonOverground: "London Overground",
+  Piccadilly: "Piccadilly",
+  Bakerloo: "Bakerloo",
+  District: "District",
+  Northern: "Northern",
+};
+
+export const stops: { [key: string]: Station } = {
+  AbbeyWood: {
+    name: "Abbey Wood",
+    connectsTo: [connections.NationalRail],
+  },
+  ActonMainLine: {
+    name: "Acton Main Line",
+    connectsTo: [connections.NationalRail],
+  },
+  BondStreet: {
+    name: "Bond Street",
+    connectsTo: [connections.Central, connections.Jubilee],
+  },
+  Brentwood: {
+    name: "Brentwood",
+    connectsTo: [connections.NationalRail],
+  },
+  BurnhamBerks: {
+    name: "Burnham (Berks)",
+    connectsTo: [connections.NationalRail],
+  },
+  CanaryWharf: {
+    name: "Canary Wharf",
+    connectsTo: [connections.Jubilee, connections.DLR],
+  },
+  ChadwellHeath: {
+    name: "Chadwell Heath",
+    connectsTo: [connections.NationalRail],
+  },
+  CustomHouse: {
+    name: "Custom House",
+    connectsTo: [connections.DLR],
+  },
+  EalingBroadway: {
+    name: "Ealing Broadway",
+    connectsTo: [
+      connections.Central,
+      connections.District,
+      connections.NationalRail,
+    ],
+  },
+  Farringdon: {
+    name: "Farringdon",
+    connectsTo: [
+      connections.Circle,
+      connections.HammersmithAndCity,
+      connections.Metropolitan,
+      connections.NationalRail,
+    ],
+  },
+  ForestGate: {
+    name: "Forest Gate",
+    connectsTo: [connections.NationalRail],
+  },
+  GideaPark: {
+    name: "Gidea Park",
+    connectsTo: [connections.NationalRail],
+  },
+  Goodmayes: {
+    name: "Goodmayes",
+    connectsTo: [connections.NationalRail],
+  },
+  Hanwell: {
+    name: "Hanwell",
+    connectsTo: [connections.NationalRail],
+  },
+  HaroldWood: {
+    name: "Harold Wood",
+    connectsTo: [connections.NationalRail],
+  },
+  HayesHarlington: {
+    name: "Hayes & Harlington",
+    connectsTo: [connections.NationalRail],
+  },
+  HeathrowTerminal4: {
+    name: "Heathrow Terminal 4",
+    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+  },
+  HeathrowTerminal5: {
+    name: "Heathrow Terminal 5",
+    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+  },
+  HeathrowTerminals23: {
+    name: "Heathrow Terminals 2 & 3",
+    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+  },
+  Ilford: {
+    name: "Ilford",
+    connectsTo: [connections.NationalRail],
+  },
+  Iver: {
+    name: "Iver",
+    connectsTo: [connections.NationalRail],
+  },
+  LangleyBerks: {
+    name: "Langley (Berks)",
+    connectsTo: [connections.NationalRail],
+  },
+  LiverpoolStreet: {
+    name: "Liverpool Street",
+    connectsTo: [
+      connections.Central,
+      connections.Circle,
+      connections.HammersmithAndCity,
+      connections.Metropolitan,
+      connections.NationalRail,
+      connections.LondonOverground,
+    ],
+  },
+  Maidenhead: {
+    name: "Maidenhead",
+    connectsTo: [connections.NationalRail],
+  },
+  ManorPark: {
+    name: "Manor Park",
+    connectsTo: [connections.NationalRail],
+  },
+  Maryland: {
+    name: "Maryland",
+    connectsTo: [connections.NationalRail],
+  },
+  Paddington: {
+    name: "Paddington",
+    connectsTo: [
+      connections.Bakerloo,
+      connections.Circle,
+      connections.District,
+      connections.HammersmithAndCity,
+      connections.NationalRail,
+    ],
+  },
+  Reading: {
+    name: "Reading",
+    connectsTo: [connections.NationalRail],
+  },
+  Romford: {
+    name: "Romford",
+    connectsTo: [connections.NationalRail, connections.LondonOverground],
+  },
+  SevenKings: {
+    name: "Seven Kings",
+    connectsTo: [connections.NationalRail],
+  },
+  Shenfield: {
+    name: "Shenfield",
+    connectsTo: [connections.NationalRail],
+  },
+  Slough: {
+    name: "Slough",
+    connectsTo: [connections.NationalRail],
+  },
+  Southall: {
+    name: "Southall",
+    connectsTo: [connections.NationalRail],
+  },
+  StratfordLondon: {
+    name: "Stratford (London)",
+    connectsTo: [
+      connections.Central,
+      connections.Jubilee,
+      connections.DLR,
+      connections.NationalRail,
+      connections.LondonOverground,
+    ],
+  },
+  Taplow: {
+    name: "Taplow",
+    connectsTo: [connections.NationalRail],
+  },
+  TottenhamCourtRoad: {
+    name: "Tottenham Court Road",
+    connectsTo: [connections.Central, connections.Northern],
+  },
+  Twyford: {
+    name: "Twyford",
+    connectsTo: [connections.NationalRail],
+  },
+  WestDrayton: {
+    name: "West Drayton",
+    connectsTo: [connections.NationalRail],
+  },
+  WestEaling: {
+    name: "West Ealing",
+    connectsTo: [connections.NationalRail],
+  },
+  Whitechapel: {
+    name: "Whitechapel",
+    connectsTo: [
+      connections.District,
+      connections.HammersmithAndCity,
+      connections.LondonOverground,
+    ],
+  },
+  Woolwich: {
+    name: "Woolwich",
+    connectsTo: [],
+  },
+};
+
+export const AbbeyWoodToHeathrowTerminal4 = [
+  stops.AbbeyWood,
+  stops.Woolwich,
+  stops.CustomHouse,
+  stops.CanaryWharf,
+  stops.Whitechapel,
+  stops.LiverpoolStreet,
+  stops.Farringdon,
+  stops.TottenhamCourtRoad,
+  stops.BondStreet,
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal4,
+];
+
+export const AbbeyWoodToHeathrowTerminal5 = [
+  stops.AbbeyWood,
+  stops.Woolwich,
+  stops.CustomHouse,
+  stops.CanaryWharf,
+  stops.Whitechapel,
+  stops.LiverpoolStreet,
+  stops.Farringdon,
+  stops.TottenhamCourtRoad,
+  stops.BondStreet,
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal5,
+];
+
+export const AbbeyWoodToReading = [
+  stops.AbbeyWood,
+  stops.Woolwich,
+  stops.CustomHouse,
+  stops.CanaryWharf,
+  stops.Whitechapel,
+  stops.LiverpoolStreet,
+  stops.Farringdon,
+  stops.TottenhamCourtRoad,
+  stops.BondStreet,
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.WestDrayton,
+  stops.Iver,
+  stops.LangleyBerks,
+  stops.Slough,
+  stops.BurnhamBerks,
+  stops.Taplow,
+  stops.Maidenhead,
+  stops.Twyford,
+  stops.Reading,
+];
+
+export const LondonPaddingtonToHeathrowTerminal4 = [
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal4,
+];
+
+export const LondonPaddingtonToHeathrowTerminal5 = [
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal5,
+];
+
+export const LondonPaddingtonToReading = [
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.WestDrayton,
+  stops.Iver,
+  stops.LangleyBerks,
+  stops.Slough,
+  stops.BurnhamBerks,
+  stops.Taplow,
+  stops.Maidenhead,
+  stops.Twyford,
+  stops.Reading,
+];
+
+export const ShenfieldToHeathrowTerminal4 = [
+  stops.Shenfield,
+  stops.Brentwood,
+  stops.HaroldWood,
+  stops.GideaPark,
+  stops.Romford,
+  stops.ChadwellHeath,
+  stops.Goodmayes,
+  stops.SevenKings,
+  stops.Ilford,
+  stops.ManorPark,
+  stops.ForestGate,
+  stops.Maryland,
+  stops.StratfordLondon,
+  stops.Whitechapel,
+  stops.LiverpoolStreet,
+  stops.Farringdon,
+  stops.TottenhamCourtRoad,
+  stops.BondStreet,
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal4,
+];
+
+export const ShenfieldToHeathrowTerminal5 = [
+  stops.Shenfield,
+  stops.Brentwood,
+  stops.HaroldWood,
+  stops.GideaPark,
+  stops.Romford,
+  stops.ChadwellHeath,
+  stops.Goodmayes,
+  stops.SevenKings,
+  stops.Ilford,
+  stops.ManorPark,
+  stops.ForestGate,
+  stops.Maryland,
+  stops.StratfordLondon,
+  stops.Whitechapel,
+  stops.LiverpoolStreet,
+  stops.Farringdon,
+  stops.TottenhamCourtRoad,
+  stops.BondStreet,
+  stops.Paddington,
+  stops.ActonMainLine,
+  stops.EalingBroadway,
+  stops.WestEaling,
+  stops.Hanwell,
+  stops.Southall,
+  stops.HayesHarlington,
+  stops.HeathrowTerminals23,
+  stops.HeathrowTerminal5,
+];
+
+export const ShenfieldToLondonLiverpoolStreet = [
+  stops.Shenfield,
+  stops.Brentwood,
+  stops.HaroldWood,
+  stops.GideaPark,
+  stops.Romford,
+  stops.ChadwellHeath,
+  stops.Goodmayes,
+  stops.SevenKings,
+  stops.Ilford,
+  stops.ManorPark,
+  stops.ForestGate,
+  stops.Maryland,
+  stops.StratfordLondon,
+  stops.LiverpoolStreet,
+];
