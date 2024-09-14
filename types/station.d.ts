@@ -1,4 +1,6 @@
+import { ConnectionEnum } from "../constants/TFL/connectionEnum";
+
 type Station = {
   name: string!;
-  connectsTo: string[];
+  connectsTo: ConnectionEnum[];
 };

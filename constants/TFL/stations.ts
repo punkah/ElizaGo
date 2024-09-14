@@ -1,403 +1,214 @@
-export const connections = {
-  Central: "Central",
-  Jubilee: "Jubilee",
-  DLR: "DLR",
-  NationalRail: "National Rail",
-  Circle: "Circle",
-  HammersmithAndCity: "Hammersmith & City",
-  Metropolitan: "Metropolitan",
-  LondonOverground: "London Overground",
-  Piccadilly: "Piccadilly",
-  Bakerloo: "Bakerloo",
-  District: "District",
-  Northern: "Northern",
-};
+import { Station } from "../../types/station";
+import { ConnectionEnum } from "./connectionEnum";
+import { StopEnum } from "./stopEnum";
 
-export const stops: { [key: string]: Station } = {
-  AbbeyWood: {
+export const stations: { [key in StopEnum]: Station } = {
+  [StopEnum.AbbeyWood]: {
     name: "Abbey Wood",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  ActonMainLine: {
+  [StopEnum.ActonMainLine]: {
     name: "Acton Main Line",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  BondStreet: {
+  [StopEnum.BondStreet]: {
     name: "Bond Street",
-    connectsTo: [connections.Central, connections.Jubilee],
+    connectsTo: [ConnectionEnum.Central, ConnectionEnum.Jubilee],
   },
-  Brentwood: {
+  [StopEnum.Brentwood]: {
     name: "Brentwood",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  BurnhamBerks: {
+  [StopEnum.BurnhamBerks]: {
     name: "Burnham (Berks)",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  CanaryWharf: {
+  [StopEnum.CanaryWharf]: {
     name: "Canary Wharf",
-    connectsTo: [connections.Jubilee, connections.DLR],
+    connectsTo: [ConnectionEnum.Jubilee, ConnectionEnum.DLR],
   },
-  ChadwellHeath: {
+  [StopEnum.ChadwellHeath]: {
     name: "Chadwell Heath",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  CustomHouse: {
+  [StopEnum.CustomHouse]: {
     name: "Custom House",
-    connectsTo: [connections.DLR],
+    connectsTo: [ConnectionEnum.DLR],
   },
-  EalingBroadway: {
+  [StopEnum.EalingBroadway]: {
     name: "Ealing Broadway",
     connectsTo: [
-      connections.Central,
-      connections.District,
-      connections.NationalRail,
+      ConnectionEnum.Central,
+      ConnectionEnum.District,
+      ConnectionEnum.NationalRail,
     ],
   },
-  Farringdon: {
+  [StopEnum.Farringdon]: {
     name: "Farringdon",
     connectsTo: [
-      connections.Circle,
-      connections.HammersmithAndCity,
-      connections.Metropolitan,
-      connections.NationalRail,
+      ConnectionEnum.Circle,
+      ConnectionEnum.HammersmithAndCity,
+      ConnectionEnum.Metropolitan,
+      ConnectionEnum.NationalRail,
     ],
   },
-  ForestGate: {
+  [StopEnum.ForestGate]: {
     name: "Forest Gate",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  GideaPark: {
+  [StopEnum.GideaPark]: {
     name: "Gidea Park",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Goodmayes: {
+  [StopEnum.Goodmayes]: {
     name: "Goodmayes",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Hanwell: {
+  [StopEnum.Hanwell]: {
     name: "Hanwell",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  HaroldWood: {
+  [StopEnum.HaroldWood]: {
     name: "Harold Wood",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  HayesHarlington: {
+  [StopEnum.HayesHarlington]: {
     name: "Hayes & Harlington",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  HeathrowTerminal4: {
+  [StopEnum.HeathrowTerminal4]: {
     name: "Heathrow Terminal 4",
-    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+    connectsTo: [
+      ConnectionEnum.Piccadilly,
+      ConnectionEnum.NationalRail,
+      ConnectionEnum.Airport,
+    ],
   },
-  HeathrowTerminal5: {
+  [StopEnum.HeathrowTerminal5]: {
     name: "Heathrow Terminal 5",
-    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+    connectsTo: [
+      ConnectionEnum.Piccadilly,
+      ConnectionEnum.NationalRail,
+      ConnectionEnum.Airport,
+    ],
   },
-  HeathrowTerminals23: {
+  [StopEnum.HeathrowTerminals23]: {
     name: "Heathrow Terminals 2 & 3",
-    connectsTo: [connections.Piccadilly, connections.NationalRail, "airport"],
+    connectsTo: [
+      ConnectionEnum.Piccadilly,
+      ConnectionEnum.NationalRail,
+      ConnectionEnum.Airport,
+    ],
   },
-  Ilford: {
+  [StopEnum.Ilford]: {
     name: "Ilford",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Iver: {
+  [StopEnum.Iver]: {
     name: "Iver",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  LangleyBerks: {
+  [StopEnum.LangleyBerks]: {
     name: "Langley (Berks)",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  LiverpoolStreet: {
+  [StopEnum.LiverpoolStreet]: {
     name: "Liverpool Street",
     connectsTo: [
-      connections.Central,
-      connections.Circle,
-      connections.HammersmithAndCity,
-      connections.Metropolitan,
-      connections.NationalRail,
-      connections.LondonOverground,
+      ConnectionEnum.Central,
+      ConnectionEnum.Circle,
+      ConnectionEnum.HammersmithAndCity,
+      ConnectionEnum.Metropolitan,
+      ConnectionEnum.NationalRail,
+      ConnectionEnum.LondonOverground,
     ],
   },
-  Maidenhead: {
+  [StopEnum.Maidenhead]: {
     name: "Maidenhead",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  ManorPark: {
+  [StopEnum.ManorPark]: {
     name: "Manor Park",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Maryland: {
+  [StopEnum.Maryland]: {
     name: "Maryland",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Paddington: {
+  [StopEnum.Paddington]: {
     name: "Paddington",
     connectsTo: [
-      connections.Bakerloo,
-      connections.Circle,
-      connections.District,
-      connections.HammersmithAndCity,
-      connections.NationalRail,
+      ConnectionEnum.Bakerloo,
+      ConnectionEnum.Circle,
+      ConnectionEnum.District,
+      ConnectionEnum.HammersmithAndCity,
+      ConnectionEnum.NationalRail,
     ],
   },
-  Reading: {
+  [StopEnum.Reading]: {
     name: "Reading",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Romford: {
+  [StopEnum.Romford]: {
     name: "Romford",
-    connectsTo: [connections.NationalRail, connections.LondonOverground],
+    connectsTo: [ConnectionEnum.NationalRail, ConnectionEnum.LondonOverground],
   },
-  SevenKings: {
+  [StopEnum.SevenKings]: {
     name: "Seven Kings",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Shenfield: {
+  [StopEnum.Shenfield]: {
     name: "Shenfield",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Slough: {
+  [StopEnum.Slough]: {
     name: "Slough",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Southall: {
+  [StopEnum.Southall]: {
     name: "Southall",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  StratfordLondon: {
+  [StopEnum.StratfordLondon]: {
     name: "Stratford (London)",
     connectsTo: [
-      connections.Central,
-      connections.Jubilee,
-      connections.DLR,
-      connections.NationalRail,
-      connections.LondonOverground,
+      ConnectionEnum.Central,
+      ConnectionEnum.Jubilee,
+      ConnectionEnum.DLR,
+      ConnectionEnum.NationalRail,
+      ConnectionEnum.LondonOverground,
     ],
   },
-  Taplow: {
+  [StopEnum.Taplow]: {
     name: "Taplow",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  TottenhamCourtRoad: {
+  [StopEnum.TottenhamCourtRoad]: {
     name: "Tottenham Court Road",
-    connectsTo: [connections.Central, connections.Northern],
+    connectsTo: [ConnectionEnum.Central, ConnectionEnum.Northern],
   },
-  Twyford: {
+  [StopEnum.Twyford]: {
     name: "Twyford",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  WestDrayton: {
+  [StopEnum.WestDrayton]: {
     name: "West Drayton",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  WestEaling: {
+  [StopEnum.WestEaling]: {
     name: "West Ealing",
-    connectsTo: [connections.NationalRail],
+    connectsTo: [ConnectionEnum.NationalRail],
   },
-  Whitechapel: {
+  [StopEnum.Whitechapel]: {
     name: "Whitechapel",
     connectsTo: [
-      connections.District,
-      connections.HammersmithAndCity,
-      connections.LondonOverground,
+      ConnectionEnum.District,
+      ConnectionEnum.HammersmithAndCity,
+      ConnectionEnum.LondonOverground,
     ],
   },
-  Woolwich: {
+  [StopEnum.Woolwich]: {
     name: "Woolwich",
     connectsTo: [],
   },
 };
-
-export const AbbeyWoodToHeathrowTerminal4 = [
-  stops.AbbeyWood,
-  stops.Woolwich,
-  stops.CustomHouse,
-  stops.CanaryWharf,
-  stops.Whitechapel,
-  stops.LiverpoolStreet,
-  stops.Farringdon,
-  stops.TottenhamCourtRoad,
-  stops.BondStreet,
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal4,
-];
-
-export const AbbeyWoodToHeathrowTerminal5 = [
-  stops.AbbeyWood,
-  stops.Woolwich,
-  stops.CustomHouse,
-  stops.CanaryWharf,
-  stops.Whitechapel,
-  stops.LiverpoolStreet,
-  stops.Farringdon,
-  stops.TottenhamCourtRoad,
-  stops.BondStreet,
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal5,
-];
-
-export const AbbeyWoodToReading = [
-  stops.AbbeyWood,
-  stops.Woolwich,
-  stops.CustomHouse,
-  stops.CanaryWharf,
-  stops.Whitechapel,
-  stops.LiverpoolStreet,
-  stops.Farringdon,
-  stops.TottenhamCourtRoad,
-  stops.BondStreet,
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.WestDrayton,
-  stops.Iver,
-  stops.LangleyBerks,
-  stops.Slough,
-  stops.BurnhamBerks,
-  stops.Taplow,
-  stops.Maidenhead,
-  stops.Twyford,
-  stops.Reading,
-];
-
-export const LondonPaddingtonToHeathrowTerminal4 = [
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal4,
-];
-
-export const LondonPaddingtonToHeathrowTerminal5 = [
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal5,
-];
-
-export const LondonPaddingtonToReading = [
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.WestDrayton,
-  stops.Iver,
-  stops.LangleyBerks,
-  stops.Slough,
-  stops.BurnhamBerks,
-  stops.Taplow,
-  stops.Maidenhead,
-  stops.Twyford,
-  stops.Reading,
-];
-
-export const ShenfieldToHeathrowTerminal4 = [
-  stops.Shenfield,
-  stops.Brentwood,
-  stops.HaroldWood,
-  stops.GideaPark,
-  stops.Romford,
-  stops.ChadwellHeath,
-  stops.Goodmayes,
-  stops.SevenKings,
-  stops.Ilford,
-  stops.ManorPark,
-  stops.ForestGate,
-  stops.Maryland,
-  stops.StratfordLondon,
-  stops.Whitechapel,
-  stops.LiverpoolStreet,
-  stops.Farringdon,
-  stops.TottenhamCourtRoad,
-  stops.BondStreet,
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal4,
-];
-
-export const ShenfieldToHeathrowTerminal5 = [
-  stops.Shenfield,
-  stops.Brentwood,
-  stops.HaroldWood,
-  stops.GideaPark,
-  stops.Romford,
-  stops.ChadwellHeath,
-  stops.Goodmayes,
-  stops.SevenKings,
-  stops.Ilford,
-  stops.ManorPark,
-  stops.ForestGate,
-  stops.Maryland,
-  stops.StratfordLondon,
-  stops.Whitechapel,
-  stops.LiverpoolStreet,
-  stops.Farringdon,
-  stops.TottenhamCourtRoad,
-  stops.BondStreet,
-  stops.Paddington,
-  stops.ActonMainLine,
-  stops.EalingBroadway,
-  stops.WestEaling,
-  stops.Hanwell,
-  stops.Southall,
-  stops.HayesHarlington,
-  stops.HeathrowTerminals23,
-  stops.HeathrowTerminal5,
-];
-
-export const ShenfieldToLondonLiverpoolStreet = [
-  stops.Shenfield,
-  stops.Brentwood,
-  stops.HaroldWood,
-  stops.GideaPark,
-  stops.Romford,
-  stops.ChadwellHeath,
-  stops.Goodmayes,
-  stops.SevenKings,
-  stops.Ilford,
-  stops.ManorPark,
-  stops.ForestGate,
-  stops.Maryland,
-  stops.StratfordLondon,
-  stops.LiverpoolStreet,
-];

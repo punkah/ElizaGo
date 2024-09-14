@@ -1,7 +1,12 @@
+import { PaperProvider } from "react-native-paper";
 import MainScreen from "./components/MainScreen";
 
 export default function App() {
-  return <MainScreen />;
+  return (
+    <PaperProvider>
+      <MainScreen />
+    </PaperProvider>
+  );
 }
 
 // const styles = StyleSheet.create({
