@@ -13,7 +13,6 @@ const MainContainer = styled(SafeAreaView)`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 16px;
 `;
 
 const Top = styled(View)`
@@ -21,12 +20,15 @@ const Top = styled(View)`
   justify-content: space-between;
   width: 100%;
   gap: 16px;
+  padding-horizontal: 16px;
+  padding-top: 16px;
 `;
 
-const Bottom = styled(View)`
+const Bottom = styled(ScrollView)`
   margin-top: 16px;
   flex: 1;
   width: 100%;
+  padding-horizontal: 16px;
 `;
 const FromContainer = styled(View)`
   align-items: flex-start;
@@ -49,6 +51,7 @@ const FilterRow = styled(View)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-horizontal: 16px;
 `;
 
 const defaultFrom = [...new Set(lines.map((line) => line.from))].sort((a, b) =>
@@ -168,11 +171,9 @@ export default function MainScreen() {
         </Top>
       )}
       <Bottom>
-        <ScrollView>
-          {stopList
-            ?.filter((stop) => exits[stop].cars.length > 0)
-            .map((stop) => <StationCard stop={stop} key={stop} />)}
-        </ScrollView>
+        {stopList
+          ?.filter((stop) => exits[stop].cars.length > 0)
+          .map((stop) => <StationCard stop={stop} key={stop} />)}
       </Bottom>
     </MainContainer>
   );
